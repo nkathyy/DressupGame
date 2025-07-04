@@ -1,0 +1,15 @@
+/* .resultBox {
+    width: 80%;
+    height: 90%;
+    background-color: pink;
+    margin: auto;
+} */
+
+.assets {
+    max-height: 800px;
+    background-color: orange;
+    margin: auto;
+    height: 80%;
+    aspect-ratio: 500/800;
+    padding: 2%;
+}
