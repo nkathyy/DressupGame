@@ -7,16 +7,20 @@ import Button from "./components/Button";
 function App() {
   return (
     <div className="app">
-      <div className="box">
-        <Result />
-      </div>
-      <div className="box right">
+      <div>
         <h1>test</h1>
-        <div className="buttons">
-          <Button />
-          <Button />
+        <div className="container">
+          <div className="box">
+            <Result />
+            <Button btnType="long" btnText="Save" />
+            <div className="infoBtn">
+              <Button btnType="round" btnText="?" />
+            </div>
+          </div>
+          <div className="box">
+            <Drawer />
+          </div>
         </div>
-        <Drawer />
       </div>
     </div>
   );

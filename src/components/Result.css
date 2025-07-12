@@ -6,10 +6,9 @@
 } */
 
 .assets {
-    max-height: 800px;
-    background-color: orange;
+    height: 75%;
+    background-color: #f78ca2;
     margin: auto;
-    height: 80%;
-    aspect-ratio: 500/800;
-    padding: 2%;
+    aspect-ratio: 4/5;
+
 }

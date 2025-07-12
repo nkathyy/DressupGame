@@ -1,3 +1,7 @@
-export default function Button() {
-  return <button>B</button>;
-}
+import "./Button.css";
+
+const Button = ({ btnType, btnText }) => {
+  return <button className={btnType}>{btnText}</button>;
+};
+
+export default Button;
