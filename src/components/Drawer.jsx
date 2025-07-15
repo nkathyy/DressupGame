@@ -1,16 +1,18 @@
 import "./Drawer.css";
-import Tab from "./Tab";
-import Item from "./Item";
+import Tabs from "./Tabs";
+// import Item from "./Item";s
+import { tabsList } from "../utils/tabsList.js";
 
-export default function Drawer() {
+const Drawer = ({ currentTab, updateTab }) => {
   return (
     <div className="drawer">
-      {/* <div className="tabs">
-        <Tab />
-      </div>
-      <div className="Items">
+      <Tabs tabArray={tabsList} currentTab={currentTab} updateTab={updateTab} />
+      {/* <div className="Items">
         <Item />
-      </div> */}
+      </div>{" "}
+       */}
     </div>
   );
-}
+};
+
+export default Drawer;

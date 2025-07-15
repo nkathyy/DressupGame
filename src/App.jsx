@@ -3,8 +3,15 @@ import "./App.css";
 import Result from "./components/Result";
 import Drawer from "./components/Drawer";
 import Button from "./components/Button";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [currentTab, setCurrentTab] = useState(1);
+
+  const updateTab = (newTab) => {
+    setCurrentTab(newTab);
+  };
+
   return (
     <div className="app">
       <div>
@@ -18,12 +25,12 @@ function App() {
             </div>
           </div>
           <div className="box">
-            <Drawer />
+            <Drawer currentTab={currentTab} updateTab={updateTab} />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;
