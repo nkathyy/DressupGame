@@ -3,7 +3,7 @@ import "./App.css";
 import Result from "./components/Result";
 import Drawer from "./components/Drawer";
 import Button from "./components/Button";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState(1);
@@ -12,24 +12,67 @@ const App = () => {
     setCurrentTab(newTab);
   };
 
+  const [currentElement, setCurrentElement] = useState({
+    Face: "F0",
+    Clothes: "C0",
+    Hair: "H0",
+  });
+
+  const canvasRef = useRef(null);
+
+  const loadImage = (src) =>
+    new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.src = src;
+    });
+
+  const onSave = async () => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
+
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, 600, 750);
+
+    const images = await Promise.all(
+      Object.values(currentElement).map((value) =>
+        loadImage(`/assets/img/${value}.png`)
+      )
+    );
+
+    images.forEach((img) => {
+      context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    });
+
+    const url = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.download = `${Date.now()}.png`;
+    link.href = url;
+    link.click();
+  };
+
   return (
-    <div className="app">
-      <div>
-        <h1>test</h1>
-        <div className="container">
-          <div className="box">
-            <Result />
-            <Button btnType="long" btnText="Save" />
-            <div className="infoBtn">
-              <Button btnType="round" btnText="?" />
+    <>
+      <canvas ref={canvasRef} width="600px" height="750px"></canvas>
+      <div className="app">
+        <div>
+          <h1>test</h1>
+          <div className="container">
+            <div className="box">
+              <Result />
+              <Button btnType="long" btnText="Save" onClick={onSave} />
+
+              <div className="infoBtn">
+                <Button btnType="round" btnText="?" />
+              </div>
             </div>
-          </div>
-          <div className="box">
-            <Drawer currentTab={currentTab} updateTab={updateTab} />
+            <div className="box">
+              <Drawer currentTab={currentTab} updateTab={updateTab} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
