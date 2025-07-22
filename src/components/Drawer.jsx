@@ -3,14 +3,16 @@ import Tabs from "./Tabs";
 import Items from "./Items";
 import { tabsList } from "../constants/tabsList.js";
 
-const Drawer = ({ currentTab, updateTab }) => {
+const Drawer = ({ currentTab, updateTab, currentElement, updateResult }) => {
   return (
     <div className="drawer">
       <Tabs tabArray={tabsList} currentTab={currentTab} updateTab={updateTab} />
-      {/* <div className="Items">
-        <Item />
-      </div>{" "}
-       */}
+
+      <Items
+        currentTab={currentTab}
+        currentElement={currentElement}
+        updateResult={updateResult}
+      />
     </div>
   );
 };

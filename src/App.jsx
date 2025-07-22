@@ -20,6 +20,10 @@ const App = () => {
 
   const canvasRef = useRef(null);
 
+  const updateResult = (newElement) => {
+    setCurrentElement(newElement);
+  };
+
   const loadImage = (src) =>
     new Promise((resolve) => {
       const img = new Image();
@@ -59,15 +63,19 @@ const App = () => {
           <h1>test</h1>
           <div className="container">
             <div className="box">
-              <Result />
+              <Result currentElement={currentElement} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
-
               <div className="infoBtn">
                 <Button btnType="round" btnText="?" />
               </div>
             </div>
             <div className="box">
-              <Drawer currentTab={currentTab} updateTab={updateTab} />
+              <Drawer
+                currentTab={currentTab}
+                updateTab={updateTab}
+                currentElement={currentElement}
+                updateResult={updateResult}
+              />
             </div>
           </div>
         </div>
