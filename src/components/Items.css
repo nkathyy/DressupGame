@@ -1,0 +1,29 @@
+.itemsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    max-height: 100%;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 2%;
+}
+
+.item {
+    width: 80%;
+    aspect-ratio: 1/1;
+    background-color: #fadadd;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.item:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.selectedItem {
+    background-color: white;
+}
