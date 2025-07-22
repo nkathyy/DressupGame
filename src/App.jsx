@@ -12,7 +12,7 @@ const App = () => {
     setCurrentTab(newTab);
   };
 
-  const [currentElement, setCurrentElement] = useState({
+  const [currentItems, setCurrentItems] = useState({
     Face: "F0",
     Clothes: "C0",
     Hair: "H0",
@@ -20,8 +20,8 @@ const App = () => {
 
   const canvasRef = useRef(null);
 
-  const updateResult = (newElement) => {
-    setCurrentElement(newElement);
+  const updateResult = (newItems) => {
+    setCurrentItems(newItems);
   };
 
   const loadImage = (src) =>
@@ -39,7 +39,7 @@ const App = () => {
     context.fillRect(0, 0, 600, 750);
 
     const images = await Promise.all(
-      Object.values(currentElement).map((value) =>
+      Object.values(currentItems).map((value) =>
         loadImage(`/assets/img/${value}.png`)
       )
     );
@@ -63,7 +63,7 @@ const App = () => {
           <h1>test</h1>
           <div className="container">
             <div className="box">
-              <Result currentElement={currentElement} />
+              <Result currentItems={currentItems} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
               <div className="infoBtn">
                 <Button btnType="round" btnText="?" />
@@ -73,7 +73,7 @@ const App = () => {
               <Drawer
                 currentTab={currentTab}
                 updateTab={updateTab}
-                currentElement={currentElement}
+                currentItems={currentItems}
                 updateResult={updateResult}
               />
             </div>

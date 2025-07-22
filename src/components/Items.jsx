@@ -2,11 +2,11 @@ import "./Items.css";
 import * as Constants from "../constants/assetsConstant.js";
 import { tabsList } from "../constants/tabsList.js";
 
-const Item = ({ tabName, index, currentElement, updateResult }) => {
+const Item = ({ tabName, index, currentItems, updateResult }) => {
   const itemName = tabName.charAt(0).concat(index);
 
   function onSelect() {
-    let newElement = { ...currentElement };
+    let newElement = { ...currentItems };
     newElement[tabName] = itemName;
     updateResult(newElement);
     // console.log(newElement);
@@ -15,7 +15,7 @@ const Item = ({ tabName, index, currentElement, updateResult }) => {
   return (
     <div
       className={`item ${
-        currentElement[tabName] === itemName ? "selectedItem" : ""
+        currentItems[tabName] === itemName ? "selectedItem" : ""
       }`}
       onClick={onSelect}
     >
@@ -24,7 +24,7 @@ const Item = ({ tabName, index, currentElement, updateResult }) => {
   );
 };
 
-const Items = ({ currentTab, currentElement, updateResult }) => {
+const Items = ({ currentTab, currentItems, updateResult }) => {
   const tabName = tabsList[currentTab - 1].name;
   const itemLength = Constants[tabName.toUpperCase().concat("_LENGTH")];
   const items = [];
@@ -35,7 +35,7 @@ const Items = ({ currentTab, currentElement, updateResult }) => {
         key={i}
         tabName={tabName}
         index={i}
-        currentElement={currentElement}
+        currentItems={currentItems}
         updateResult={updateResult}
       />
     );
