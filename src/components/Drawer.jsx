@@ -1,7 +1,7 @@
 import "./Drawer.css";
 import Tabs from "./Tabs";
-// import Item from "./Item";s
-import { tabsList } from "../utils/tabsList.js";
+import Items from "./Items";
+import { tabsList } from "../constants/tabsList.js";
 
 const Drawer = ({ currentTab, updateTab }) => {
   return (
