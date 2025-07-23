@@ -48,6 +48,14 @@ const App = () => {
       context.drawImage(img, 0, 0, canvas.width, canvas.height);
     });
 
+    context.drawImage(
+      await loadImage("/assets/img/watermark.png"),
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
     const url = canvas.toDataURL("image/png");
     const link = document.createElement("a");
     link.download = `${Date.now()}.png`;
