@@ -16,6 +16,7 @@ const App = () => {
     Face: "F0",
     Clothes: "C0",
     Hair: "H0",
+    Accessory: "A0",
   });
 
   const canvasRef = useRef(null);
