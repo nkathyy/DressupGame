@@ -1,28 +1,36 @@
 .round {
-    height: 65px;
-    width: 65px;
-    border-radius: 50%;
-    border: none;
-    color: #f78ca2;
-    background-color: #fadadd;
-    margin: 20px;
+  width: 80%;
+  aspect-ratio: 1/1;
+  max-width: 60px;
+  border-radius: 50%;
+  border: none;
+  color: #f78ca2;
+  background-color: #fadadd;
+  margin: 20px;
 }
 
 .round:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .long {
-    width: 25%;
-    height: 50px;
-    background-color: #d72638;
-    color: #fff5f7;
-    border: none;
-    border-radius: 50px;
-    margin: auto ;
-    margin-top: 0;
+  width: 25%;
+  height: 50px;
+  background-color: #d72638;
+  color: #fff5f7;
+  border: none;
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 0;
 }
 
 .long:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1025px) {
+  .long {
+    width: 20%;
+    height: 40px;
+  }
 }

@@ -59,10 +59,11 @@ const App = () => {
     <>
       <canvas ref={canvasRef} width="600px" height="750px"></canvas>
       <div className="app">
-        <div>
-          <h1>test</h1>
+        <div className="outerContainer">
+          <h1 className="bigScreen">test</h1>
           <div className="container">
             <div className="box">
+              <h1 className="mobile">test</h1>
               <Result currentItems={currentItems} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
               <div className="infoBtn">
