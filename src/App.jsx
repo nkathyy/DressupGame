@@ -3,11 +3,13 @@ import "./App.css";
 import Result from "./components/Result";
 import Drawer from "./components/Drawer";
 import Button from "./components/Button";
+import InfoBox from "./components/InfoBox";
 import { useRef, useState } from "react";
 import { img } from "./constants/imgMap.js";
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState(1);
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
 
   const updateTab = (newTab) => {
     setCurrentTab(newTab);
@@ -64,8 +66,18 @@ const App = () => {
     link.click();
   };
 
+  const openPopup = () => {
+    setIsOpenPopup(true);
+  };
+
+  const closePopup = () => {
+    setIsOpenPopup(false);
+  };
+
   return (
     <>
+      <InfoBox isOpenPopup={isOpenPopup} closePopup={closePopup} />
+
       <canvas ref={canvasRef} width="600px" height="750px"></canvas>
       <div className="app">
         <div className="outerContainer">
@@ -76,7 +88,7 @@ const App = () => {
               <Result currentItems={currentItems} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
               <div className="infoBtn">
-                <Button btnType="round" btnText="?" />
+                <Button btnType="round" btnText="?" onClick={openPopup} />
               </div>
             </div>
             <div className="box">
