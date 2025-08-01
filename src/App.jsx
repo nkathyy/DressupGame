@@ -80,6 +80,7 @@ const App = () => {
 
       <canvas ref={canvasRef} width="600px" height="750px"></canvas>
       <div className="app">
+        <p className="wm">© 2025 hn104mi All rights reserved.</p>
         <div className="outerContainer">
           <h1 className="bigScreen">test</h1>
           <div className="container">
