@@ -16,6 +16,7 @@
   margin: auto;
   border-radius: 15%;
   text-align: center;
+  overflow: hidden;
 }
 
 .item:hover {
@@ -25,4 +26,31 @@
 
 .selectedItem {
   background-color: white;
+}
+
+.clothes {
+  object-fit: cover;
+  width: 200%;
+  height: 200%;
+  transform: translate(-25%, -50%);
+}
+
+.face {
+  object-fit: cover;
+  width: 150%;
+  height: 150%;
+  transform: translate(-16.5%, -15%);
+}
+
+.hair {
+  object-fit: cover;
+  width: 120%;
+  height: 120%;
+  transform: translate(-8.5%, 2%);
+}
+
+.accessory {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

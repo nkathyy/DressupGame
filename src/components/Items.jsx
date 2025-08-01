@@ -1,6 +1,7 @@
 import "./Items.css";
 import * as Constants from "../constants/assetsConstant.js";
 import { tabsList } from "../constants/tabsList.js";
+import { img } from "../constants/imgMap.js";
 
 const Item = ({ tabName, index, currentItems, updateResult }) => {
   const itemName = tabName.charAt(0).concat(index);
@@ -19,7 +20,11 @@ const Item = ({ tabName, index, currentItems, updateResult }) => {
       }`}
       onClick={onSelect}
     >
-      Item: {tabName.charAt(0).concat(index)}
+      <img
+        src={img[`${itemName}`]}
+        className={`${tabName.toLowerCase()}`}
+        draggable="false"
+      />
     </div>
   );
 };
