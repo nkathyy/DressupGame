@@ -4,6 +4,7 @@ import Result from "./components/Result";
 import Drawer from "./components/Drawer";
 import Button from "./components/Button";
 import { useRef, useState } from "react";
+import { img } from "./constants/imgMap.js";
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState(1);
@@ -40,9 +41,7 @@ const App = () => {
     context.fillRect(0, 0, 600, 750);
 
     const images = await Promise.all(
-      Object.values(currentItems).map((value) =>
-        loadImage(`/assets/img/${value}.png`)
-      )
+      Object.values(currentItems).map((value) => loadImage(img[`${value}`]))
     );
 
     images.forEach((img) => {
@@ -50,7 +49,7 @@ const App = () => {
     });
 
     context.drawImage(
-      await loadImage("/assets/img/watermark.png"),
+      await loadImage(img["watermark"]),
       0,
       0,
       canvas.width,
@@ -59,6 +58,7 @@ const App = () => {
 
     const url = canvas.toDataURL("image/png");
     const link = document.createElement("a");
+
     link.download = `${Date.now()}.png`;
     link.href = url;
     link.click();
