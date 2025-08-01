@@ -24,6 +24,7 @@ const Item = ({ tabName, index, currentItems, updateResult }) => {
         src={img[`${itemName}`]}
         className={`${tabName.toLowerCase()}`}
         draggable="false"
+        alt={`${tabName} ${index}`}
       />
     </div>
   );
