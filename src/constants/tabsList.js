@@ -11,8 +11,8 @@ export const tabsList = [
         index: 3,
         name: "Clothes",
     },
-    {
-        index: 4,
-        name: "Accessory",
-    },
+    // {
+    //     index: 4,
+    //     name: "Accessory",
+    // },
 ]
