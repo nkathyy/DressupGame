@@ -161,4 +161,8 @@ h3 {
     text-align: center;
     color: #d2d48d;
   }
+
+  .wm {
+    font-size: smaller;
+  }
 }
