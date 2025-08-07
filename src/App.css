@@ -58,6 +58,11 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-weight: normal;
+  margin: 0;
+}
+
 .infoBtn {
   position: absolute;
   width: 10%;

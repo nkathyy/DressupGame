@@ -1,4 +1,5 @@
 import "./InfoBox.css";
+import Ig from "../assets/instagram.png";
 
 const InfoBox = ({ isOpenPopup, closePopup }) => {
   return (
@@ -8,18 +9,28 @@ const InfoBox = ({ isOpenPopup, closePopup }) => {
     >
       <div className="popupBox">
         <button className="closeBtn" onClick={closePopup}>
-          X
+          <h2>X</h2>
         </button>
-        <h2>Title</h2>
+        <h2 className="infoTitle">2025 S.COUPS Birthday Project</h2>
         <ul>
-          <li>Choose assets in the drawer.</li>
-          <li>Click the Save button to save the image.</li>
-          <li>The image would be saved in .png</li>
-          <li>Please do not remove watermark on the result image.</li>
           <li>
-            All right reserved by <i>hn104mi</i>
+            <h3>Choose assets in the drawer.</h3>
+          </li>
+          <li>
+            <h3>Click the Save button to save the image.</h3>
+          </li>
+          <li>
+            <h3>Please do not remove watermark on the result image.</h3>
+          </li>
+          <li>
+            <h3>
+              All right reserved by <i>hn104mi</i>
+            </h3>
           </li>
         </ul>
+        <a href="https://www.instagram.com/hn104mi/" target="_blank">
+          <img src={Ig} className="igIcon" />
+        </a>
       </div>
     </div>
   );

@@ -81,14 +81,14 @@ const App = () => {
       <div className="app">
         <p className="wm">© 2025 hn104mi All rights reserved.</p>
         <div className="outerContainer">
-          <h1 className="bigScreen">test</h1>
+          <h1 className="bigScreen">2025 S.COUPS Birthday Project</h1>
           <div className="container">
             <div className="box">
-              <h1 className="mobile">test</h1>
+              <h1 className="mobile">2025 S.COUPS Birthday Project</h1>
               <Result currentItems={currentItems} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
               <div className="infoBtn">
-                <Button btnType="round" btnText="?" onClick={openPopup} />
+                <Button btnType="round" btnText="!" onClick={openPopup} />
               </div>
             </div>
             <div className="box">
