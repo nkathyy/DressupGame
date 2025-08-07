@@ -26,6 +26,7 @@
 
 ul {
   list-style-type: none;
+  padding: 0;
   padding-top: 3%;
 }
 
@@ -58,5 +59,6 @@ li {
 @media only screen and (max-width: 1180px) {
   .popupBox {
     width: 70%;
+    padding: 7% 3% 0 3%;
   }
 }
