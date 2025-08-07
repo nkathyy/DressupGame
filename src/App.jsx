@@ -16,8 +16,8 @@ const App = () => {
 
   const [currentItems, setCurrentItems] = useState({
     Face: "F0",
-    Clothes: "C0",
     Hair: "H0",
+    Clothes: "C0",
     Accessory: "A0",
   });
 
