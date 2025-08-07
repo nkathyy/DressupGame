@@ -17,7 +17,7 @@ const Tab = ({ tabInfo, tabNo, updateTab, currentTab }) => {
       }`}
       onClick={onclickTab}
     >
-      <p>{tabInfo.name}</p>
+      <h2>{tabInfo.name}</h2>
     </div>
   );
 };
