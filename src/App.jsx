@@ -1,4 +1,3 @@
-// import logo from "./logo.svg";
 import "./App.css";
 import Result from "./components/Result";
 import Drawer from "./components/Drawer";
