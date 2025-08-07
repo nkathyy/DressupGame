@@ -28,8 +28,12 @@ const InfoBox = ({ isOpenPopup, closePopup }) => {
             </h3>
           </li>
         </ul>
-        <a href="https://www.instagram.com/hn104mi/" target="_blank">
-          <img src={Ig} className="igIcon" />
+        <a
+          href="https://www.instagram.com/hn104mi/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Ig} className="igIcon" alt="ig link" />
         </a>
       </div>
     </div>
