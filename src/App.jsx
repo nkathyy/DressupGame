@@ -84,7 +84,7 @@ const App = () => {
           <h1 className="bigScreen">2025 S.COUPS Birthday Project</h1>
           <div className="container">
             <div className="box">
-              <h1 className="mobile">2025 S.COUPS Birthday Project</h1>
+              <h2 className="mobile">2025 S.COUPS Birthday Project</h2>
               <Result currentItems={currentItems} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
               <div className="infoBtn">
