@@ -11,7 +11,7 @@ const InfoBox = ({ isOpenPopup, closePopup }) => {
         <button className="closeBtn" onClick={closePopup}>
           <h2>X</h2>
         </button>
-        <h2 className="infoTitle">2025 S.COUPS Birthday Project</h2>
+        <h2 className="infoTitle">2025 Project</h2>
         <ul>
           <li>
             <h3>Choose assets in the drawer.</h3>
@@ -22,17 +22,8 @@ const InfoBox = ({ isOpenPopup, closePopup }) => {
           <li>
             <h3>Please do not remove watermark on the result image.</h3>
           </li>
-          <li>
-            <h3>
-              All right reserved by <i>hn104mi</i>
-            </h3>
-          </li>
         </ul>
-        <a
-          href="https://www.instagram.com/hn104mi/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="" target="_blank" rel="noreferrer">
           <img src={Ig} className="igIcon" alt="ig link" />
         </a>
       </div>

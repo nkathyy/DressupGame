@@ -79,12 +79,12 @@ const App = () => {
 
       <canvas ref={canvasRef} width="600px" height="750px"></canvas>
       <div className="app">
-        <p className="wm">© 2025 hn104mi All rights reserved.</p>
+        <p className="wm">© 2025.</p>
         <div className="outerContainer">
-          <h1 className="bigScreen">2025 S.COUPS Birthday Project</h1>
+          <h1 className="bigScreen">2025 Project</h1>
           <div className="container">
             <div className="box">
-              <h2 className="mobile">2025 S.COUPS Birthday Project</h2>
+              <h2 className="mobile">2025 Project</h2>
               <Result currentItems={currentItems} />
               <Button btnType="long" btnText="Save" onClick={onSave} />
               <div className="infoBtn">
